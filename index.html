@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash4College - The $94,000 Mistake 73% of Parents Make</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Cash4College - Strategic College Planning & Scholarships</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -23,11 +23,16 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Work Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-gray);
             background: var(--cream);
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
@@ -37,7 +42,7 @@
         }
         
         .narrow-container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -45,58 +50,51 @@
         /* Hero Section */
         .hero {
             background: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
             box-shadow: 0 4px 20px var(--shadow);
         }
         
         .headline {
             font-family: 'Crimson Pro', serif;
-            font-size: 52px;
+            font-size: 48px;
             font-weight: 700;
             line-height: 1.2;
             color: var(--dark-blue);
-            margin-bottom: 30px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 25px;
         }
         
         .deadline-highlight {
             color: var(--primary-red);
-            position: relative;
-            display: inline-block;
         }
         
         .subheadline {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 1.6;
             color: var(--text-gray);
-            max-width: 900px;
-            margin: 0 auto 40px;
-            font-weight: 400;
+            margin: 0 auto 30px;
+            max-width: 700px;
         }
         
-        .authority-line {
+        .authority-box {
             background: var(--light-gray);
-            padding: 25px 30px;
+            padding: 20px 25px;
             border-radius: 8px;
-            margin: 40px auto;
-            max-width: 800px;
+            margin: 30px auto;
+            max-width: 700px;
             border-left: 4px solid var(--gold);
         }
         
         .authority-name {
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px;
             color: var(--dark-blue);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
         
         .authority-credentials {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-gray);
-            line-height: 1.5;
         }
         
         .stats-highlight {
@@ -109,44 +107,45 @@
             display: inline-block;
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
             color: white;
-            padding: 20px 50px;
-            font-size: 20px;
+            padding: 18px 45px;
+            font-size: 18px;
             font-weight: 700;
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
             margin: 20px 0;
-            border: none;
-            cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            min-height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(196, 30, 58, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
         }
         
         .cta-benefits {
             background: var(--light-gray);
-            padding: 30px;
+            padding: 25px;
             border-radius: 8px;
-            margin: 30px auto;
-            max-width: 700px;
+            margin: 25px auto;
+            max-width: 650px;
             text-align: left;
         }
         
         .cta-benefits ul {
             list-style: none;
-            margin: 15px 0;
+            margin: 15px 0 0 0;
         }
         
         .cta-benefits li {
-            padding: 10px 0;
-            padding-left: 30px;
+            padding: 8px 0 8px 30px;
             position: relative;
-            font-size: 16px;
+            font-size: 15px;
         }
         
         .cta-benefits li::before {
@@ -155,19 +154,12 @@
             left: 0;
             color: var(--primary-red);
             font-weight: 700;
-            font-size: 20px;
-        }
-        
-        .no-pitch {
-            font-weight: 700;
-            color: var(--dark-blue);
-            margin-top: 20px;
-            font-size: 15px;
+            font-size: 18px;
         }
         
         /* Content Sections */
         .content-section {
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
         
         .section-dark {
@@ -185,9 +177,9 @@
         
         .section-heading {
             font-family: 'Crimson Pro', serif;
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: var(--dark-blue);
             line-height: 1.2;
         }
@@ -196,28 +188,17 @@
             color: white;
         }
         
-        .section-subheading {
-            font-size: 24px;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            color: var(--dark-blue);
-        }
-        
-        .section-dark .section-subheading {
-            color: var(--gold);
-        }
-        
         .content-text {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 18px;
         }
         
         .highlight-box {
             background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
             border-left: 5px solid var(--primary-red);
-            padding: 30px;
-            margin: 30px 0;
+            padding: 25px;
+            margin: 25px 0;
             border-radius: 8px;
         }
         
@@ -226,110 +207,68 @@
             border-left: 5px solid var(--gold);
         }
         
-        /* Three-Part System */
-        .system-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .system-card {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        
-        .system-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .system-number {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--primary-red);
-            margin-bottom: 10px;
-        }
-        
-        .system-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--dark-blue);
-        }
-        
-        /* Proof Section */
+        /* Stats Grid */
         .proof-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
         
         .stat-box {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 35px 25px;
             border-radius: 8px;
             text-align: center;
         }
         
         .stat-number {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .stat-label {
-            font-size: 16px;
+            font-size: 14px;
             opacity: 0.9;
         }
         
         /* Testimonials */
         .testimonial {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
-            margin: 30px 0;
+            margin: 25px 0;
             box-shadow: 0 4px 20px var(--shadow);
             border-left: 5px solid var(--gold);
         }
         
         .testimonial-quote {
-            font-size: 18px;
+            font-size: 16px;
             font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 20px;
+            line-height: 1.6;
+            margin-bottom: 15px;
             color: var(--text-gray);
         }
         
         .testimonial-author {
             font-weight: 700;
             color: var(--dark-blue);
-            margin-bottom: 5px;
+            font-size: 15px;
         }
         
-        .testimonial-result {
-            color: var(--primary-red);
-            font-weight: 600;
-            margin-top: 15px;
-            font-size: 16px;
-        }
-        
-        /* Comparison Section */
+        /* Comparison */
         .comparison-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 50px 0;
+            gap: 25px;
+            margin: 40px 0;
         }
         
         .comparison-card {
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
-            position: relative;
         }
         
         .future-bad {
@@ -342,32 +281,20 @@
             color: white;
         }
         
-        .comparison-label {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-        
         .comparison-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .comparison-list {
             list-style: none;
-            margin: 20px 0;
         }
         
         .comparison-list li {
-            padding: 12px 0;
-            padding-left: 30px;
+            padding: 10px 0 10px 28px;
             position: relative;
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 15px;
         }
         
         .future-bad .comparison-list li::before {
@@ -376,7 +303,7 @@
             left: 0;
             color: #e74c3c;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px;
         }
         
         .future-good .comparison-list li::before {
@@ -385,224 +312,146 @@
             left: 0;
             color: var(--gold);
             font-weight: 700;
-            font-size: 20px;
-        }
-        
-        .comparison-outcome {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 25px;
-            font-weight: 600;
-        }
-        
-        /* Process Timeline */
-        .timeline {
-            margin: 50px 0;
-            position: relative;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--primary-red);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 80px;
-            margin-bottom: 50px;
-        }
-        
-        .timeline-number {
-            position: absolute;
-            left: 0;
-            width: 60px;
-            height: 60px;
-            background: var(--primary-red);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
-        }
-        
-        .timeline-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--dark-blue);
-            margin-bottom: 10px;
-        }
-        
-        .timeline-content {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--text-gray);
-        }
-        
-        /* Urgency Banner */
-        .urgency-banner {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        
-        .urgency-title {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .deadline-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            max-width: 1000px;
-            margin: 30px auto;
-        }
-        
-        .deadline-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
+            font-size: 18px;
         }
         
         /* Footer */
         .footer {
             background: var(--dark-blue);
             color: white;
-            padding: 60px 20px 30px;
+            padding: 50px 20px 30px;
             text-align: center;
         }
         
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
         .footer-name {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .footer-title {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--gold);
             margin-bottom: 20px;
         }
         
         .footer-contact {
-            margin: 30px 0;
-            font-size: 16px;
+            margin: 25px 0;
+            font-size: 15px;
+            line-height: 1.6;
         }
         
         .footer-link {
             color: var(--gold);
             text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-        
-        .footer-link:hover {
-            opacity: 0.8;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+            
             .headline {
-                font-size: 36px;
+                font-size: 28px;
             }
             
             .subheadline {
-                font-size: 18px;
+                font-size: 17px;
+            }
+            
+            .authority-name {
+                font-size: 16px;
+            }
+            
+            .authority-credentials {
+                font-size: 14px;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 400px;
+                padding: 16px 30px;
+                font-size: 16px;
+            }
+            
+            .content-section {
+                padding: 40px 20px;
             }
             
             .section-heading {
-                font-size: 32px;
+                font-size: 26px;
+            }
+            
+            .content-text {
+                font-size: 16px;
             }
             
             .comparison-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
-            .timeline::before {
-                left: 20px;
+            .proof-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
             }
             
-            .timeline-item {
-                padding-left: 70px;
+            .stat-number {
+                font-size: 32px;
             }
             
-            .timeline-number {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+            .testimonial {
+                padding: 20px;
+            }
+            
+            .testimonial-quote {
+                font-size: 15px;
             }
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 24px;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .proof-stats {
+                grid-template-columns: 1fr;
             }
         }
-        
-        .animate-fade-in {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="headline animate-fade-in">
-                The <span class="deadline-highlight">$94,000 Mistake</span> 73% of Parents Make This Fall (And How to Avoid It Before Your Child's <span class="deadline-highlight">October 15th Deadline</span>)
+            <h1 class="headline">
+                The <span class="deadline-highlight">$94,000 Mistake</span> 73% of Parents Make (And How to Avoid It Before October 15th)
             </h1>
             
-            <p class="subheadline animate-fade-in delay-1">
-                How a strategic 3-month test prep plan can unlock <strong>$40,000-$200,000 in merit scholarships</strong>—even at "test-optional" schools—without touching your retirement or taking on crushing debt
+            <p class="subheadline">
+                How strategic test prep can unlock $40,000-$200,000 in merit scholarships—even at "test-optional" schools—without touching your retirement or taking on crushing debt
             </p>
             
-            <div class="authority-line animate-fade-in delay-2">
+            <div class="authority-box">
                 <div class="authority-name">Nadine Underbrink, M.Ed. | President, Cash4College</div>
                 <div class="authority-credentials">
-                    17+ Years as Educator, Academic Dean & Trusted Advisor | <span class="stats-highlight">$566 Million in Scholarships & Grants Unlocked</span> for Students Across Texas & Nationwide
+                    17+ Years Experience | <span class="stats-highlight">1,000+ Students Helped</span> | <span class="stats-highlight">$566 Million in Scholarships Unlocked</span>
                 </div>
             </div>
             
-            <a href="#schedule" class="cta-button animate-fade-in delay-3">
-                Claim Your Free Strategy Session →
+            <a href="#schedule" class="cta-button">
+                Schedule Your Free Strategy Session →
             </a>
             
             <div class="cta-benefits">
-                <strong>On this complimentary 30-minute call, you'll discover:</strong>
+                <strong>On this 30-minute call, discover:</strong>
                 <ul>
-                    <li>Whether the ACT or SAT is right for YOUR student (most choose wrong)</li>
+                    <li>Whether ACT or SAT is right for YOUR student</li>
                     <li>Your child's exact score target for their dream schools</li>
-                    <li>The 3-step timeline that works backwards from early action deadlines</li>
+                    <li>The timeline that works backwards from early action deadlines</li>
                     <li>How to position for merit scholarships before windows close</li>
                 </ul>
-                <div class="no-pitch">This is not a sales pitch. It's a clarity call designed to help you make informed decisions before key testing and scholarship windows close.</div>
             </div>
         </div>
     </section>
@@ -610,89 +459,64 @@
     <!-- Problem Section -->
     <section class="content-section section-cream">
         <div class="narrow-container">
-            <h2 class="section-heading">The Truth About "Test-Optional" Policies</h2>
-            
-            <p class="content-text">Here's what universities won't tell you:</p>
+            <h2 class="section-heading">The Truth About "Test-Optional"</h2>
             
             <div class="highlight-box">
                 <p class="content-text"><strong>Test-optional doesn't mean test-irrelevant.</strong></p>
-                <p class="content-text">When your child applies test-optional, they're competing against students WITH scores. In a competitive applicant pool, going test-optional means <em>voluntarily giving away ground.</em></p>
+                <p class="content-text">When your child applies test-optional, they're competing against students WITH scores. In competitive pools, going test-optional means voluntarily giving away ground.</p>
+                <p class="content-text" style="margin-top: 15px; font-weight: 700; color: var(--primary-red);">If a student applies test-optional (without an ACT or SAT), they reduce their chances at prestigious universities by 50-70%.</p>
             </div>
             
-            <p class="content-text"><strong>Think about it this way:</strong></p>
-            <p class="content-text">Two students with identical GPAs. Student A submits a 1450 SAT. Student B goes test-optional.</p>
+            <p class="content-text"><strong>The real-world results:</strong></p>
+            <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                <li><strong>Students WITH high scores:</strong> Gain admission to Stanford, Georgia Tech, UT Austin, University of Michigan</li>
+                <li><strong>Students WITHOUT scores:</strong> Do not gain admission to these competitive universities</li>
+            </ul>
+            
+            <p class="content-text"><strong>Two students with identical GPAs. Student A submits a 1450 SAT. Student B goes test-optional.</strong></p>
+            
             <p class="content-text">Who gets admitted? Who gets the $42,000/year merit scholarship?</p>
-            <p class="content-text"><strong>The student with the score. Every. Single. Time.</strong></p>
             
-            <h3 class="section-subheading">The Real Cost of "Playing It Safe"</h3>
+            <p class="content-text" style="font-size: 20px; font-weight: 700; color: var(--primary-red);">The student with the score. Every. Single. Time.</p>
             
-            <div class="highlight-box">
-                <p class="content-text">Without test scores:</p>
-                <ul style="margin: 20px 0; padding-left: 25px;">
-                    <li style="margin: 10px 0;">Your child becomes a "middle group" applicant—evaluated more stringently</li>
-                    <li style="margin: 10px 0;">Merit scholarships go to students with objective proof of readiness</li>
-                    <li style="margin: 10px 0;">You pay $70,000-$94,000/year full price while other families pay $15,000-$45,000</li>
-                    <li style="margin: 10px 0;">Your retirement accounts get raided or your child graduates with $200,000 in debt</li>
-                </ul>
-            </div>
+            <p class="content-text" style="margin-top: 25px;"><strong>Test scores are one of four key components for an Ivy League acceptance letter.</strong> Without them, your child is competing with one hand tied behind their back.</p>
             
-            <p class="content-text" style="font-size: 20px; font-weight: 600; margin-top: 30px;">Every student is unique. My mission is to reveal the best college options and the funding that makes them possible.</p>
-            
-            <a href="#schedule" class="cta-button" style="display: inline-block; margin: 30px 0;">
+            <a href="#schedule" class="cta-button" style="margin-top: 20px;">
                 Learn Your Strategic Options →
             </a>
         </div>
     </section>
 
-    <!-- Mechanism Section -->
+    <!-- Value Proposition -->
     <section class="content-section section-light">
-        <div class="container">
-            <h2 class="section-heading" style="text-align: center; margin-bottom: 50px;">The Proven Strategic Positioning Approach</h2>
+        <div class="narrow-container" style="text-align: center;">
+            <h2 class="section-heading">Strategic Positioning That Works</h2>
             
-            <p class="content-text" style="text-align: center; font-size: 20px; max-width: 800px; margin: 0 auto 50px;">
-                With 17+ years as an educator, academic dean, and trusted advisor, I tailor strategy for each family—so your student's academic journey aligns with your financial goals.
+            <p class="content-text" style="max-width: 650px; margin: 0 auto 30px;">
+                With 17+ years as an educator, academic dean, and trusted advisor, I've helped over 1,000 students navigate college admissions and unlock substantial scholarships—tailoring strategy for each family so your student's academic journey aligns with your financial goals.
             </p>
             
-            <div class="system-grid">
-                <div class="system-card">
-                    <div class="system-number">1</div>
-                    <h3 class="system-title">Target Merit Scholarship Universities</h3>
-                    <p>Not all schools offer the same opportunities. Some universities are "rather generous" when students position correctly:</p>
-                    <ul style="margin: 20px 0; padding-left: 20px; font-size: 15px;">
-                        <li style="margin: 8px 0;">USC: Trustee Scholarship (full ride)</li>
-                        <li style="margin: 8px 0;">Johns Hopkins: Hodson Trust (~$42,000/year = ~$170,000 total)</li>
-                        <li style="margin: 8px 0;">UVA: Jefferson Scholarship (full tuition + research/study abroad funds)</li>
-                        <li style="margin: 8px 0;">Vanderbilt: Ingram, Cornelius Vanderbilt, Chancellor's Scholars</li>
-                        <li style="margin: 8px 0;">Duke & UNC: Robertson Scholars Leadership Program</li>
-                    </ul>
-                    <p style="margin-top: 20px;"><strong>But they don't advertise these.</strong> You need insider knowledge.</p>
-                </div>
-                
-                <div class="system-card">
-                    <div class="system-number">2</div>
-                    <h3 class="system-title">Family Financial Positioning</h3>
-                    <p><strong>The biggest mistake parents make:</strong> Assuming FAFSA gives money.</p>
-                    <p style="margin: 15px 0;"><strong>FAFSA doesn't give money—it evaluates your tax return.</strong></p>
-                    <p>It looks at taxable income to calculate your Student Aid Index (SAI). This drives what colleges think you can "afford."</p>
-                    <p style="margin-top: 20px;">Many families' tax returns unintentionally position them to look wealthier than they are. With professional guidance, there are creative, ethical ways to position your finances to maximize both aid eligibility AND merit scholarship potential.</p>
-                </div>
-                
-                <div class="system-card">
-                    <div class="system-number">3</div>
-                    <h3 class="system-title">Strategic Academic Profile Development</h3>
-                    <p><strong>This is where test scores become the linchpin.</strong></p>
-                    <p style="margin: 15px 0;">Strong test scores (ACT or SAT) coupled with strong grades unlock:</p>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li style="margin: 8px 0;">Admission offers from competitive universities</li>
-                        <li style="margin: 8px 0;">Substantial merit scholarships ($40K-$200K+)</li>
-                        <li style="margin: 8px 0;">Multiple options (not desperate)</li>
-                    </ul>
-                    <p><strong>But it's not just about scores.</strong> It's about building a compelling narrative—not a random list of activities.</p>
-                </div>
+            <div class="highlight-box" style="text-align: left;">
+                <p class="content-text"><strong>Real Results from Strategic Positioning:</strong></p>
+                <ul style="margin: 15px 0 0 20px; line-height: 1.8;">
+                    <li>One student with high scores earned <strong>over $218,000</strong> in merit scholarship offers</li>
+                    <li>Need-based scholarships are based on parent finances, BUT the higher the student's ACT or SAT, the more likely the university wants to give need-based scholarships</li>
+                    <li>Students gain admission to Stanford, Georgia Tech, UT Austin, University of Michigan with strong scores</li>
+                </ul>
             </div>
             
-            <p class="content-text" style="text-align: center; font-size: 22px; font-weight: 700; margin-top: 50px; color: var(--primary-red);">
-                My proven approach has unlocked over $566 million in scholarships and grants for students of all backgrounds.
+            <div class="highlight-box" style="text-align: left; margin-top: 25px;">
+                <p class="content-text"><strong>Universities don't advertise scholarships, but they're "rather generous" when students position correctly:</strong></p>
+                <ul style="margin: 15px 0 0 20px; line-height: 1.8;">
+                    <li>USC: Trustee Scholarship (full ride)</li>
+                    <li>Johns Hopkins: Hodson Trust (~$170,000 total)</li>
+                    <li>UVA: Jefferson Scholarship (full tuition + enrichment)</li>
+                    <li>Vanderbilt, Duke, UNC: Multiple full-tuition programs</li>
+                </ul>
+            </div>
+            
+            <p class="content-text" style="font-size: 19px; font-weight: 600; margin-top: 30px;">
+                Strong test scores (ACT or SAT) + strategic positioning = $40,000-$200,000+ in scholarships
             </p>
         </div>
     </section>
@@ -700,290 +524,147 @@
     <!-- Proof Section -->
     <section class="content-section section-dark">
         <div class="container">
-            <h2 class="section-heading" style="text-align: center;">Real Results from Real Families</h2>
+            <h2 class="section-heading" style="text-align: center;">Proven Results</h2>
             
             <div class="proof-stats">
                 <div class="stat-box">
                     <div class="stat-number">$566M+</div>
-                    <div class="stat-label">In Scholarships & Grants<br>Unlocked for Students</div>
+                    <div class="stat-label">Scholarships Unlocked</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">17+</div>
-                    <div class="stat-label">Years as Educator,<br>Academic Dean & Advisor</div>
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Students Helped</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">300</div>
-                    <div class="stat-label">Point SAT Improvement<br>(Verified Student Result)</div>
+                    <div class="stat-number">$218K+</div>
+                    <div class="stat-label">Single Student's Scholarships</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">TX + US</div>
-                    <div class="stat-label">Serving Families<br>Across Texas & Nationwide</div>
+                    <div class="stat-number">50-70%</div>
+                    <div class="stat-label">Reduced Chance Without Scores</div>
                 </div>
             </div>
             
-            <div style="max-width: 900px; margin: 50px auto 0;">
+            <div style="max-width: 800px; margin: 40px auto 0;">
                 <div class="testimonial">
-                    <p class="testimonial-quote">"One of my students started with big dreams but an average GPA and a low SAT. Yet, he remained determined to achieve his dreams. He cracked down on his studies and moved up in class rank just enough to make the cut. And, he test trained diligently and increased his SAT score by 300 points and made it into his dream school! Motivation trumps IQ!"</p>
-                    <div class="testimonial-author">Nadine Underbrink, M.Ed.</div>
-                    <div class="testimonial-result">Result: 300-point SAT increase → Dream school admission</div>
+                    <p class="testimonial-quote">"We have worked with Ms. Underbrink for both of our children! She helped them get thousands upon thousands of dollars in scholarships. Every aspect of getting into college, choosing a college, funding, scholarships, testing—you name it and she had the experience and knowledge to help us through it all. You can't afford not to use her company!"</p>
+                    <div class="testimonial-author">— Giselle S., Houston (Verified Google Review)</div>
                 </div>
                 
                 <div class="testimonial">
-                    <p class="testimonial-quote">"We have worked with Ms. Underbrink and cash4college for both of our children! To say that we are happy with her work or overjoyed with her work is an understatement. She was incredibly knowledgeable, thought completely out of the box and helped to get both of our children thousands upon thousands of dollars in scholarships. Every aspect of getting into College, choosing a college, funding, scholarships, testing, you name it and she had the experience and knowledge to help us through it all. I cannot say enough good things about Ms. Underbrink and cash for college. You can't afford not to use her company!"</p>
-                    <div class="testimonial-author">Giselle S., Houston (Verified Google Review)</div>
-                    <div class="testimonial-result">Result: Both children received substantial scholarships</div>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Nadine was truly a wonderful college counselor! She helped my daughter in every step of her college journey and helped her become confident in her application. Nadine advises with kindness and compassion, always shedding a positive light on every situation. She is a treasure trove of knowledge when it comes to college applications and she is extremely dedicated to helping every student succeed. She gives up so much of her time to help each student and is available to answer questions very frequently. Nadine is truly a pleasure to work with, and I am so grateful that she helped my daughter with her college application. My daughter is at a school she loves and Nadine truly made that possible. I cannot recommend her enough!"</p>
-                    <div class="testimonial-author">Ravi K., Houston (Verified Google Review)</div>
-                    <div class="testimonial-result">Result: Daughter at school she loves with confidence and full preparation</div>
+                    <p class="testimonial-quote">"Nadine helped my daughter in every step of her college journey. She is a treasure trove of knowledge and extremely dedicated to helping every student succeed. My daughter is at a school she loves and Nadine truly made that possible. I cannot recommend her enough!"</p>
+                    <div class="testimonial-author">— Ravi K., Houston (Verified Google Review)</div>
                 </div>
             </div>
-            
-            <p class="content-text" style="text-align: center; font-size: 20px; margin-top: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Whether you're seeking guidance for admissions, maximizing scholarship opportunities, or specialized support for fine arts and athletic recruitment, I work side-by-side with families to make college dreams financially possible.
-            </p>
         </div>
     </section>
 
     <!-- Comparison Section -->
     <section class="content-section section-cream">
         <div class="container">
-            <h2 class="section-heading" style="text-align: center; margin-bottom: 20px;">Your Child's Future Depends on What You Do Next</h2>
-            <p class="content-text" style="text-align: center; font-size: 20px; max-width: 800px; margin: 0 auto 50px;">
-                The path your child is on right now leads to one of two very different futures:
-            </p>
+            <h2 class="section-heading" style="text-align: center;">Two Different Futures</h2>
             
             <div class="comparison-grid">
                 <div class="comparison-card future-bad">
-                    <div class="comparison-label">Without Strategy</div>
-                    <h3 class="comparison-title">Future 1: The Default Path</h3>
+                    <h3 class="comparison-title">Without Strategy</h3>
                     <ul class="comparison-list">
-                        <li>Student applies test-optional</li>
-                        <li>Gets waitlisted at reach schools</li>
-                        <li>Minimal or no merit scholarships</li>
+                        <li>Applies test-optional</li>
+                        <li>Minimal scholarships</li>
                         <li>Pay $70,000-$94,000/year</li>
-                        <li>Retirement accounts depleted OR $200,000 in debt</li>
-                        <li>Constant financial stress</li>
+                        <li>$280,000-$376,000 total</li>
+                        <li>Retirement depleted or debt burden</li>
                     </ul>
-                    <div class="comparison-outcome">
-                        <strong>Total Cost:</strong> $280,000-$376,000<br>
-                        <strong>Emotional Outcome:</strong> Regret and "what if?"
-                    </div>
                 </div>
                 
                 <div class="comparison-card future-good">
-                    <div class="comparison-label">With Strategic Planning</div>
-                    <h3 class="comparison-title">Future 2: The Strategic Path</h3>
+                    <h3 class="comparison-title">With Strategic Planning</h3>
                     <ul class="comparison-list">
-                        <li>Strategic test prep + strong scores</li>
-                        <li>Multiple acceptances to competitive schools</li>
-                        <li>$40,000-$200,000+ in merit scholarships</li>
+                        <li>Strong test scores submitted</li>
+                        <li>$40K-$200K+ in scholarships</li>
                         <li>Pay $15,000-$45,000/year</li>
-                        <li>Retirement intact + debt-free graduation</li>
-                        <li>Financial peace of mind</li>
+                        <li>$60,000-$180,000 total</li>
+                        <li>Debt-free graduation</li>
                     </ul>
-                    <div class="comparison-outcome">
-                        <strong>Total Cost:</strong> $60,000-$180,000<br>
-                        <strong>Savings:</strong> $100,000-$250,000<br>
-                        <strong>Emotional Outcome:</strong> Pride and relief
-                    </div>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 50px;">
-                <h3 style="font-size: 32px; color: var(--dark-blue); margin-bottom: 20px;">The Difference Between These Two Futures?</h3>
-                <p style="font-size: 24px; font-weight: 700; color: var(--primary-red); margin-bottom: 30px;">
-                    One strategy session.<br>
-                    One decision.<br>
-                    One phone call this week.
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 22px; font-weight: 700; color: var(--primary-red); margin-bottom: 25px;">
+                    Savings: $100,000-$250,000
                 </p>
                 <a href="#schedule" class="cta-button">
-                    Choose Future 2 — Schedule Your Free Call →
+                    Choose the Strategic Path →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Process Timeline -->
-    <section class="content-section section-light">
-        <div class="narrow-container">
-            <h2 class="section-heading" style="text-align: center;">The Strategic Process</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-number">1</div>
-                    <div class="timeline-title">Strategy Session — FREE</div>
-                    <div class="timeline-content">
-                        Assess your student's current position • Identify ACT vs SAT • Calculate exact score targets for dream schools • Map timeline backwards from deadlines • Review financial positioning opportunities • Get your custom action plan
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-number">2</div>
-                    <div class="timeline-title">Test Preparation Plan</div>
-                    <div class="timeline-content">
-                        You need a solid 3 months to prep for an ACT or SAT. Strategic preparation focused on high-yield areas • Regular progress checks • Optimal test date selection aligned with early action deadlines
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-number">3</div>
-                    <div class="timeline-title">Academic Profile Development</div>
-                    <div class="timeline-content">
-                        Clean, compelling academic resume (not just a list) • Strategic course selection guidance • Activity narrative building • Leadership positioning
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-number">4</div>
-                    <div class="timeline-title">Financial Positioning</div>
-                    <div class="timeline-content">
-                        FAFSA strategy and SAI optimization • Merit scholarship university identification • Portfolio positioning for maximum aid eligibility • Strategic timing of financial decisions
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-number">5</div>
-                    <div class="timeline-title">Application Strategy</div>
-                    <div class="timeline-content">
-                        Strategic university targeting (reach/match/safety with merit potential) • Early action vs regular decision timeline optimization • Application review and essay guidance • Submission deadline management
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-number">6</div>
-                    <div class="timeline-title">Award Letter Analysis & Negotiation</div>
-                    <div class="timeline-content">
-                        Compare all offers apples-to-apples • Identify hidden scholarship opportunities • Negotiate for better packages when applicable • Make informed decision with full cost transparency
-                    </div>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="margin-top: 50px;">
-                <h3 style="font-size: 24px; margin-bottom: 20px;">FINAL RESULT:</h3>
-                <ul style="margin: 20px 0; padding-left: 25px;">
-                    <li style="margin: 10px 0;">✓ Your child confidently prepared for admissions</li>
-                    <li style="margin: 10px 0;">✓ Multiple acceptance letters from competitive schools</li>
-                    <li style="margin: 10px 0;">✓ Merit scholarships totaling $40,000-$200,000+</li>
-                    <li style="margin: 10px 0;">✓ Family savings of $100,000-$250,000 vs full price</li>
-                    <li style="margin: 10px 0;">✓ Retirement accounts protected</li>
-                    <li style="margin: 10px 0;">✓ Student graduates debt-free at a school they love</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Urgency Section -->
-    <section class="urgency-banner">
-        <div class="container">
-            <h2 class="urgency-title">Critical Deadlines Approaching—And They Don't Wait</h2>
-            <p style="font-size: 20px; margin-bottom: 30px;">If your student is applying to these schools with October 15 early action deadlines:</p>
+    <section class="content-section section-dark">
+        <div class="narrow-container" style="text-align: center;">
+            <h2 class="section-heading">Critical October 15th Deadlines</h2>
             
-            <div class="deadline-list">
-                <div class="deadline-item">University of Texas at Austin</div>
-                <div class="deadline-item">University of Michigan</div>
-                <div class="deadline-item">NYU</div>
-                <div class="deadline-item">University of Georgia</div>
-                <div class="deadline-item">UNC Chapel Hill</div>
-                <div class="deadline-item">Georgia Tech</div>
-                <div class="deadline-item">Texas A&M (engineering)</div>
-                <div class="deadline-item">Auburn</div>
+            <div class="highlight-box">
+                <p class="content-text"><strong>These schools have October 15 early action deadlines:</strong></p>
+                <p class="content-text">UT Austin • University of Michigan • NYU • UNC Chapel Hill • Georgia Tech • Texas A&M</p>
+                <p class="content-text" style="margin-top: 15px;"><strong>Students need scored results by late September = 3 months of prep starting NOW</strong></p>
             </div>
             
-            <p style="font-size: 20px; margin: 30px 0; font-weight: 600;">They need scored SAT/ACT by late September = 3 solid months of prep starting NOW</p>
+            <p class="content-text" style="font-size: 18px;">
+                Early action offers 2-3x better acceptance rates, merit scholarship priority, and peace of mind by December.
+            </p>
             
-            <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 8px; margin: 30px auto; max-width: 800px;">
-                <p style="font-size: 18px; margin-bottom: 15px;"><strong>Why early action matters:</strong></p>
-                <ul style="text-align: left; padding-left: 40px; line-height: 1.8;">
-                    <li>2-3x better acceptance rates than regular decision</li>
-                    <li>Merit scholarship priority (most big scholarships go to early action admits)</li>
-                    <li>Less competition in applicant pool</li>
-                    <li>Peace of mind by December (vs waiting until April)</li>
-                </ul>
-            </div>
-            
-            <p style="font-size: 24px; font-weight: 700; margin-top: 40px;">Once October 15 passes... it's gone. No do-overs. No second chances.</p>
+            <p class="content-text" style="font-size: 20px; font-weight: 700; margin-top: 25px;">
+                Once October 15 passes... it's gone. No second chances.
+            </p>
         </div>
     </section>
 
     <!-- Final CTA Section -->
     <section class="content-section section-light" id="schedule">
         <div class="narrow-container" style="text-align: center;">
-            <h2 class="section-heading">This Is Completely Risk-Free</h2>
+            <h2 class="section-heading">Schedule Your Free Strategy Session</h2>
             
-            <div class="cta-benefits" style="margin: 40px auto;">
-                <strong>On your complimentary 30-minute strategy session, you'll receive:</strong>
-                <ul>
-                    <li>Clear answer on whether ACT or SAT is right for YOUR student</li>
-                    <li>Exact score targets for your student's dream schools</li>
-                    <li>3-step action plan with specific timelines</li>
-                    <li>Financial positioning insights specific to your situation</li>
-                    <li>Honest assessment of where your student stands today</li>
-                </ul>
-                <div class="no-pitch">This is NOT a sales pitch. Just clarity and actionable information.</div>
-            </div>
+            <p class="content-text" style="max-width: 600px; margin: 0 auto 25px;">
+                On your complimentary 30-minute call, you'll receive a clear action plan with exact score targets, strategic timeline, and financial positioning insights specific to your situation.
+            </p>
             
-            <h3 style="font-size: 28px; margin: 40px 0 20px; color: var(--dark-blue);">No obligation. No pressure. Just honest guidance from someone with 17+ years of proven results.</h3>
+            <p class="content-text" style="font-size: 18px; font-weight: 600; margin-bottom: 30px;">
+                No obligation. No pressure. Just honest guidance from someone with 17+ years of proven results.
+            </p>
             
-            <p class="content-text" style="font-size: 20px; margin-bottom: 30px;">You literally cannot lose. <strong>The only risk is NOT calling—and missing critical deadlines that cost your family $100,000-$250,000.</strong></p>
-            
-            <a href="https://cash4college.net/contacts/" class="cta-button" style="font-size: 24px; padding: 25px 60px;">
-                CLAIM YOUR FREE STRATEGY SESSION NOW →
+            <a href="https://cash4college.net/contacts/" class="cta-button" style="font-size: 20px; padding: 20px 50px;">
+                BOOK YOUR FREE SESSION NOW →
             </a>
             
-            <!-- P.S. Section -->
-            <div style="margin-top: 80px; padding-top: 50px; border-top: 2px solid var(--light-gray); text-align: left;">
-                <p style="font-size: 18px; margin-bottom: 20px;"><strong>P.S.</strong> — Every student is unique. My mission is to reveal the best college options and the funding that makes them possible—whether you're a high achiever or facing unique challenges.</p>
-                
-                <p style="font-size: 18px; margin: 30px 0 20px;"><strong>P.P.S.</strong> — Remember: <strong>Once October 15 passes, early action is gone.</strong> No second chances.</p>
-                
-                <p style="font-size: 18px; margin-bottom: 20px;">The families who start now get the best admission chances, receive the most scholarship offers, have the most negotiating leverage, and pay the least for college.</p>
-                
-                <p style="font-size: 18px; margin-bottom: 30px;"><strong>The families who wait... pay full price.</strong></p>
-                
-                <p style="font-size: 20px; font-weight: 700; color: var(--primary-red); margin: 30px 0;">Don't let procrastination cost your family $200,000.</p>
-                
-                <a href="https://cash4college.net/contacts/" class="cta-button" style="margin: 30px 0;">
-                    Schedule Your Call Before It's Too Late →
-                </a>
-            </div>
+            <p class="content-text" style="margin-top: 40px; font-size: 16px; font-style: italic;">
+                Every student is unique. My mission is to reveal the best college options and the funding that makes them possible.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="footer-content" style="max-width: 700px; margin: 0 auto;">
             <div class="footer-name">Nadine Underbrink, M.Ed.</div>
-            <div class="footer-title">President, Cash4College | College Admissions & Scholarship Strategist</div>
+            <div class="footer-title">President, Cash4College</div>
             
             <div class="footer-contact">
                 <p><strong>Houston Office:</strong><br>
-                550 Post Oak Blvd / 4212 San Felipe<br>
-                Houston, TX 77027</p>
+                550 Post Oak Blvd / 4212 San Felipe, Houston, TX 77027</p>
                 
                 <p style="margin-top: 20px;">
-                    📧 <a href="https://cash4college.net/contacts/" class="footer-link">Contact Us</a><br>
-                    ⭐ <a href="#" class="footer-link">Visit our Google Reviews Page</a>
+                    📧 <a href="https://cash4college.net/contacts/" class="footer-link">Contact Us</a>
                 </p>
                 
-                <p style="margin-top: 30px; font-size: 14px;">
-                    <strong>Experience & Results:</strong><br>
-                    17+ Years as Educator, Academic Dean & Trusted Advisor<br>
-                    $566 Million in Scholarships & Grants Unlocked<br>
+                <p style="margin-top: 20px; font-size: 14px;">
+                    17+ Years Experience | 1,000+ Students Helped | $566 Million in Scholarships Unlocked<br>
                     Serving Families Across Texas & Nationwide
-                </p>
-                
-                <p style="margin-top: 20px; font-size: 14px; font-style: italic;">
-                    Specialized Support: Fine Arts & Athletic Recruitment
                 </p>
             </div>
             
-            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 14px; opacity: 0.7;">
-                ©2025 Cash4College. All rights reserved. | 
-                <a href="#" class="footer-link">Privacy Policy</a> | 
-                <a href="#" class="footer-link">Terms of Use</a>
+            <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 13px; opacity: 0.7;">
+                ©2025 Cash4College. All rights reserved.
             </div>
         </div>
     </footer>
